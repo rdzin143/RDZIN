@@ -1,9 +1,9 @@
 # Página de vendas — Acervo Pedagógico
 
-Página única (`index.html`), sem dependências externas: CSS e JS inline, ilustrações em SVG, fontes do sistema.
+Página única (`public/index.html`), sem dependências externas: CSS e JS inline, ilustrações em SVG, fontes do sistema.
 
 ## Antes de publicar
-Tudo o que precisa ser editado fica no bloco `PAGE_CFG`, no `<head>` do `index.html`:
+Tudo o que precisa ser editado fica no bloco `PAGE_CFG`, no `<head>` do `public/index.html`:
 - `PIXEL_ID` — ID do Pixel da Meta (vazio = Pixel desligado).
 - `CHECKOUT_BASICO` / `CHECKOUT_PREMIUM` — links de checkout.
   Os parâmetros da URL (`sck`, `utm_*`, `fbclid`…) são repassados automaticamente ao checkout.
@@ -21,3 +21,12 @@ Confira também preços, bônus e garantia na seção `#planos` e troque os depo
 
 Para a otimização de campanha, use **Compra** (disparada pela plataforma de checkout, via integração/CAPI).
 Se ainda houver poucas compras, `InitiateCheckout` serve como evento intermediário.
+
+## Publicar na Vercel
+1. Em vercel.com → **Add New… → Project**, importe este repositório do GitHub.
+2. Framework Preset: **Other**. Não precisa de build: o `vercel.json` já aponta para a pasta `public/`.
+3. Clique em **Deploy**. Cada push na branch escolhida republica a página automaticamente.
+4. (Opcional) Em **Settings → Domains**, conecte seu domínio.
+
+Imagens próprias vão em `public/img/` e são referenciadas como `/img/nome.webp` (prefira WebP, até ~150 KB cada).
+O cache de longa duração já está configurado para essa pasta.
