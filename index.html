@@ -6,6 +6,24 @@
 <title>Acervo Pedagógico — +25 mil materiais prontos para usar e revender</title>
 <meta name="description" content="Mais de 25 mil atividades, planos de aula, jogos e apostilas da Educação Infantil ao Fundamental I, com licença PLR para revenda. Acesso vitalício.">
 <meta name="theme-color" content="#e8467c">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Acervo Pedagógico — +25 mil materiais prontos para usar e revender">
+<meta property="og:description" content="Mais de 25 mil atividades, planos de aula, jogos e apostilas da Educação Infantil ao Fundamental I, com licença PLR para revenda. Acesso vitalício.">
+<script>
+/* ===== CONFIGURAÇÃO — edite só aqui ===== */
+window.PAGE_CFG={
+  PIXEL_ID:"",                                   // ID do Pixel da Meta (ex.: "123456789012345"); vazio = Pixel desligado
+  CHECKOUT_BASICO:"LINK_CHECKOUT_BASICO",        // link do checkout do Plano Básico
+  CHECKOUT_PREMIUM:"LINK_CHECKOUT_PREMIUM",      // link do checkout do Plano Premium
+  PRECO_BASICO:10.00, PRECO_PREMIUM:27.00, MOEDA:"BRL"
+};
+/* Meta Pixel */
+(function(c){if(!c.PIXEL_ID)return;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init',c.PIXEL_ID);fbq('track','PageView');
+})(window.PAGE_CFG);
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8467c'/%3E%3Cpath d='M16 20h14a6 6 0 0 1 6 6v22a5 5 0 0 0-5-5H16zM48 20H38a6 6 0 0 0-6 6v22a5 5 0 0 1 5-5h11z' fill='%23fff'/%3E%3C/svg%3E">
 <style>
 :root{
@@ -18,18 +36,6 @@
   --text:#2a2340;--muted:#6f6886;--line:#efe6ee;
   --shadow:0 8px 24px -10px rgba(120,40,90,.22);
   --r:18px;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#16121f;--bg-2:#1d1726;--bg-3:#1b1630;--card:#241d33;
-    --text:#f4eefa;--muted:#b8afc9;--line:#342a46;--pink-soft:#3a1e2c;--purple-soft:#2a2045;
-    --shadow:0 8px 24px -10px rgba(0,0,0,.6);
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#16121f;--bg-2:#1d1726;--bg-3:#1b1630;--card:#241d33;
-  --text:#f4eefa;--muted:#b8afc9;--line:#342a46;--pink-soft:#3a1e2c;--purple-soft:#2a2045;
-  --shadow:0 8px 24px -10px rgba(0,0,0,.6);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -152,22 +158,36 @@ footer p{max-width:640px;margin:0 auto .6em}
 .sticky.show{transform:none}
 .sticky .btn{padding:14px 18px;font-size:.92rem}
 
+#planos{scroll-margin-top:12px}
+.plan{cursor:pointer}
+.plan .btn{position:relative}
+.btn:active{transform:scale(.98)}
+.pulse{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 10px 24px -8px rgba(22,147,90,.6),0 0 0 0 rgba(39,195,123,.45)}50%{box-shadow:0 10px 24px -8px rgba(22,147,90,.6),0 0 0 12px rgba(39,195,123,0)}}
 @media (max-width:760px){
   section{padding:48px 0}
+  .topbar{font-size:.74rem;padding:8px 12px}
+  .hero{padding:22px 0 40px}
+  .mock{max-width:300px;margin:0 auto 12px}
+  .hero h1{font-size:1.6rem}
+  .hero .sub{font-size:.95rem;margin-bottom:1em}
+  .checks{margin-bottom:20px}
+  .checks li{padding:3px 0;font-size:.95rem}
   .tiles{grid-template-columns:1fr 1fr}
   .plans{grid-template-columns:1fr}
   .plan.best{order:-1}
   .sticky{display:block}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
 <div class="topbar">⚡ Oferta especial válida só hoje — vagas limitadas ⚡</div>
 
+<main>
 <!-- HERO -->
-<header class="hero">
+<section class="hero" id="topo">
   <div class="wrap">
     <h1>Desbloqueie +25.000 Materiais Pedagógicos <span class="pink">Prontos para Aplicar e Revender</span></h1>
     <p class="sub">Atividades, planos de aula, jogos, cartilhas e muito mais, organizados para facilitar sua rotina — e com licença PLR para você revender e ter uma renda extra.</p>
@@ -234,7 +254,7 @@ footer p{max-width:640px;margin:0 auto .6em}
     <p class="secure">🔒 Compra 100% segura · Acesso enviado por e-mail</p>
     <div class="trust"><span>Acesso imediato</span><span>Garantia de 7 dias</span></div>
   </div>
-</header>
+</section>
 
 <!-- POSSIBILIDADES -->
 <section class="s3">
@@ -377,7 +397,7 @@ footer p{max-width:640px;margin:0 auto .6em}
           <li class="off">Licença PLR para revenda</li>
           <li class="off">Bônus exclusivos</li>
         </ul>
-        <a class="btn ghost" href="LINK_CHECKOUT_BASICO" data-checkout>Quero o Plano Básico</a>
+        <a class="btn ghost" href="LINK_CHECKOUT_BASICO" data-checkout="basico" rel="noopener">Quero o Plano Básico</a>
       </div>
       <div class="plan best">
         <span class="ribbon">⭐ MAIS VENDIDO</span>
@@ -398,7 +418,7 @@ footer p{max-width:640px;margin:0 auto .6em}
           <div><span class="tag">GRÁTIS</span>Pack Canva Educacional Editável</div>
           <div><span class="tag">GRÁTIS</span>Artes para Divulgação</div>
         </div>
-        <a class="btn green" href="LINK_CHECKOUT_PREMIUM" data-checkout>👑 Quero o Plano Premium</a>
+        <a class="btn green pulse" href="LINK_CHECKOUT_PREMIUM" data-checkout="premium" rel="noopener">👑 Quero o Plano Premium</a>
         <p class="note">Acesso imediato · Garantia de 7 dias</p>
       </div>
     </div>
@@ -447,6 +467,7 @@ footer p{max-width:640px;margin:0 auto .6em}
     <a class="btn green" href="#planos" data-cta>👉 Quero começar agora</a>
   </div>
 </section>
+</main>
 <footer>
   <p>Este site não é afiliado ao Facebook, Google ou a qualquer entidade governamental.</p>
   <p>© <span id="y">2026</span> Todos os direitos reservados.</p>
@@ -456,18 +477,44 @@ footer p{max-width:640px;margin:0 auto .6em}
 
 <script>
 (function(){
-  var d=document;
+  var d=document,w=window,c=w.PAGE_CFG||{};
   d.getElementById('y').textContent=new Date().getFullYear();
-  // repassa sck/utm da URL para os links de checkout
+  function track(ev,data,custom){try{if(w.fbq)w.fbq(custom?'trackCustom':'track',ev,data||{});}catch(e){}}
+
+  // parâmetros de rastreio (sck, utm_*, fbclid, src...) — guardados na sessão para não se perderem ao navegar
   var qs=location.search.slice(1);
-  if(qs){d.querySelectorAll('[data-checkout]').forEach(function(a){var h=a.getAttribute('href');a.setAttribute('href',h+(h.indexOf('?')>-1?'&':'?')+qs);});}
-  // botão fixo no celular
-  var st=d.getElementById('sticky'),hero=d.querySelector('.hero'),plans=d.getElementById('planos'),a=false,b=false;
+  try{if(qs)sessionStorage.setItem('qs',qs);else qs=sessionStorage.getItem('qs')||'';}catch(e){}
+  var links={basico:c.CHECKOUT_BASICO,premium:c.CHECKOUT_PREMIUM},
+      price={basico:c.PRECO_BASICO,premium:c.PRECO_PREMIUM};
+  d.querySelectorAll('[data-checkout]').forEach(function(a){
+    var k=a.getAttribute('data-checkout'),h=links[k]||a.getAttribute('href');
+    if(qs)h+=(h.indexOf('?')>-1?'&':'?')+qs;
+    a.setAttribute('href',h);
+    a.addEventListener('click',function(){
+      track('InitiateCheckout',{content_name:'Acervo Pedagógico — '+k,content_ids:[k],value:price[k],currency:c.MOEDA,num_items:1});
+    });
+  });
+  // card inteiro do plano é clicável (área de toque maior no celular)
+  d.querySelectorAll('.plan').forEach(function(p){
+    p.addEventListener('click',function(e){if(e.target.closest('a'))return;var a=p.querySelector('[data-checkout]');if(a)a.click();});
+  });
+
+  // eventos para otimizar campanhas: viu os planos, rolagem, tempo na página
+  var plans=d.getElementById('planos'),hero=d.getElementById('topo'),st=d.getElementById('sticky'),
+      a=false,b=false,seen=false;
   function u(){st.classList.toggle('show',a&&!b);}
-  if('IntersectionObserver' in window){
+  if('IntersectionObserver' in w){
     new IntersectionObserver(function(e){a=!e[0].isIntersecting;u();}).observe(hero);
-    new IntersectionObserver(function(e){b=e[0].isIntersecting;u();}).observe(plans);
+    new IntersectionObserver(function(e){b=e[0].isIntersecting;u();
+      if(b&&!seen){seen=true;track('ViewContent',{content_name:'Planos',content_ids:['basico','premium'],value:c.PRECO_PREMIUM,currency:c.MOEDA});}
+    }).observe(plans);
   }
+  var marks=[50,75],sent={};
+  w.addEventListener('scroll',function(){
+    var h=d.documentElement,pct=(h.scrollTop+w.innerHeight)/h.scrollHeight*100;
+    marks.forEach(function(m){if(pct>=m&&!sent[m]){sent[m]=1;track('Scroll'+m,{},true);}});
+  },{passive:true});
+  setTimeout(function(){track('Engaged30s',{},true);},30000);
 })();
 </script>
 </body>
